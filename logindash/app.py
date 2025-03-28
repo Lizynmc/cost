@@ -118,7 +118,7 @@ def show_logged_in_screen():
 def main():
     st.set_page_config(page_title="Dash IFRO", layout="wide")
 
-    # Captura o token 
+
     query_params = st.query_params
     token = query_params.get("access_token", [None])[0]
 
