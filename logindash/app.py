@@ -1,7 +1,7 @@
 import streamlit as st
 from login_suap import gerar_url_login
 
-# Estilo com fundo verde pastel e botão centralizado
+
 st.markdown(
     """
     <style>
@@ -37,9 +37,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown('<div class="titulo">Sistema de Controle de Alarmes - IFRO</div>', unsafe_allow_html=True)
+st.markdown('<div class="titulo">Dashboard - IFRO</div>', unsafe_allow_html=True)
 
-# Gera a URL de login com os dados do st.secrets
+
 login_url = gerar_url_login()
 
 st.markdown(
