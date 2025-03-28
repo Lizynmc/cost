@@ -10,7 +10,7 @@ def gerar_url_login():
     params = {
         "client_id": client_id,
         "redirect_uri": redirect_uri,
-        "response_type": "token",  # fluxo implícito
+        "response_type": "token",  
         "scope": scope
     }
 
