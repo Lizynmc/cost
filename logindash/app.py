@@ -47,9 +47,9 @@ def show_login_screen():
         }
         </style>
         <div class="container">
-            <div class="titulo">Dashboard Desempenho Acad~emico - IFRO</div>
+            <div class="titulo">Dashboard - IFRO</div>
             <div class="descricao">
-                Bem-vindo(a) ao dashboard para análise de desempenho academico do IFRO.
+                Bem-vindo(a) ao dashboard para análise de desempenho acadêmico do IFRO.
                 Para continuar, faça login via SUAP.
             </div>
         """,
@@ -64,7 +64,7 @@ def show_login_screen():
     st.markdown("</div>", unsafe_allow_html=True)
 
 def show_logged_in_screen():
-    
+   
     st.markdown(
         """
         <style>
@@ -106,20 +106,20 @@ def show_logged_in_screen():
     )
 
     st.markdown('<div class="welcome-container">', unsafe_allow_html=True)
-    st.markdown('<div class="welcome-title">Você está logado!</div>', unsafe_allow_html=True)
+    st.markdown('<div class="welcome-title">Você está logado, bem-vindo(a)</div>', unsafe_allow_html=True)
 
     if st.button("Sair"):
-
+       
         st.experimental_set_query_params(access_token=None)
         st.experimental_rerun()
 
     st.markdown("</div>", unsafe_allow_html=True)
 
 def main():
-    st.set_page_config(page_title="Dash tela 1 - IFRO", layout="wide")
+    st.set_page_config(page_title="Dash IFRO", layout="wide")
 
-
-    query_params = st.experimental_get_query_params()
+    # Captura o token 
+    query_params = st.query_params
     token = query_params.get("access_token", [None])[0]
 
     if token:
